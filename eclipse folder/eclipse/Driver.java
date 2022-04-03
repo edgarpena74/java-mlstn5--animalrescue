@@ -1,19 +1,18 @@
-package grazioso;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
     private static ArrayList<Dog> dogList = new ArrayList<Dog>();
     // Instance variables (if needed)
-    //
-    //
-    // boolean beginMenu = true;
 
     public static void main(String[] args) {
+//    	
+//    	
+//    	CLOSE SCANNER SOMEWHERE
         Scanner scnr = new Scanner(System.in);
         char userInputMenu;
         String[] menuOptions = { "1", "2", "3", "4", "5", "6", "q" };
+        boolean menuVal = true;
 
         initializeDogList();
         initializeMonkeyList();
@@ -27,21 +26,30 @@ public class Driver {
         // Hint: Menu options 4, 5, and 6 should all connect to the printAnimals()
         // method.
         while (true) {
-            do {
+       	
+        
+            while (menuVal == true) {
                 displayMenu();
-
                 // NOTE: user .next() because the userInput is
                 // only one character
                 userInputMenu = scnr.next().charAt(0);
-            } while (boolean menuVal = true);
 
-
-            System.out.println("user INPUT: " + userInputMenu);
-
-            // NOTE: single quotes for a char and == because chars are "Primitive Type"
-            if (userInputMenu == 'q') {
-                break;
+                System.out.println("user INPUT: " + userInputMenu);
             }
+
+
+
+           menuVal = false;
+
+        //    System.out.println("menu val: " + menuVal);
+        //    System.out.println("check");
+        //    for (int i = 0; i < 0; ++i) {
+        //        System.out.println(menuOptions[i]);
+        //    }
+        //    // NOTE: single quotes for a char and == because chars are "Primitive Type"
+        //    if (userInputMenu == 'q') {
+        //        break;
+        //    }
 
         }
 
@@ -60,6 +68,7 @@ public class Driver {
         System.out.println("[q] Quit application");
         System.out.println();
         System.out.println("Enter a menu selection");
+        System.out.println();
     }
 
     // Adds dogs to a list for testing

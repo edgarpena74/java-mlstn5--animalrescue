@@ -1,6 +1,4 @@
-package grazioso;
-
-import java.lang.String;
+// import java.lang.String;
 
 public class RescueAnimal {
 

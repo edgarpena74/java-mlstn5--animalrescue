@@ -1,5 +1,3 @@
-package grazioso;
-
 public class Dog extends RescueAnimal {
 
     // Instance variable
