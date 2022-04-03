@@ -6,8 +6,14 @@ import java.util.Scanner;
 public class Driver {
     private static ArrayList<Dog> dogList = new ArrayList<Dog>();
     // Instance variables (if needed)
+    //
+    //
+    // boolean beginMenu = true;
 
     public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        char userInputMenu;
+        String[] menuOptions = { "1", "2", "3", "4", "5", "6", "q" };
 
         initializeDogList();
         initializeMonkeyList();
@@ -20,6 +26,24 @@ public class Driver {
         // methods
         // Hint: Menu options 4, 5, and 6 should all connect to the printAnimals()
         // method.
+        while (true) {
+            do {
+                displayMenu();
+
+                // NOTE: user .next() because the userInput is
+                // only one character
+                userInputMenu = scnr.next().charAt(0);
+            } while (boolean menuVal = true);
+
+
+            System.out.println("user INPUT: " + userInputMenu);
+
+            // NOTE: single quotes for a char and == because chars are "Primitive Type"
+            if (userInputMenu == 'q') {
+                break;
+            }
+
+        }
 
     }
 
